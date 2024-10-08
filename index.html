@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinApex: The crypto trading platform trusted by millions</title>
+  <link rel="icon" href="./assets/images/favicon.ico" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/jquery-3.7.1.min.js"></script>
+  <script src="assets/tailwind.js"></script>
+  <link rel="stylesheet" href="./assets/index.css" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1211799346681320');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1211799346681320&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+  <div id="showloading" class=" h-screen w-full left-0 bg-[#adadadbe] top-0 fixed duration-1000 z-50">
+    <div class=' space-x-2 justify-center flex items-center mt-[20%]'>
+      <div class='h-8  w-8 bg-black rounded-full animate-bounce [animation-delay:0s]'></div>
+      <div class='h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+      <div class='h-8 w-8 bg-black rounded-full animate-bounce'></div>
+    </div>
+  </div>
+
+  <header class=" bg-white relative  shadow-lg">
+    <div class="mx-2 sm:mx-20" id="header">
+      <div class=" flex items-center justify-between">
+        <div class="py-5   flex gap-10">
+          <a href="./index.html">
+            <h1 class="text-4xl font-medium text-[#01BC8D] hover:text-[#34C9A4]">CoinApex</h1>
+          </a>
+
+          <div
+            class="hidden md:flex items-center gap-5 *:transition-all *:duration-300 *:text-2xl *:font-medium *:text-slate-700">
+
+            <a href="#" class="hover:text-[#34C9A4]"> Buy Crypto </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Markets </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Trade </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Derivatives </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Earn </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Institutional </a>
+            <a href="#" class="hover:text-[#34C9A4]"> More </a>
+
+            <div> <a href="#" class="hover:text-[#34C9A4] bg-[#EBFAF6] py-2 px-4 rounded-lg text-[#01BC8D]"> Rewards Hub
+              </a></div>
+
+
+
+
+          </div>
+
+
+        </div>
+
+        <div class="py-5 flex items-center gap-5 text-slate-700">
+
+
+
+
+          <button onclick="url()"
+            class="py-3 px-10 hidden md:block bg-slatext-slate-700 text-slate-600 border rounded-full text-2xl font-semibold hover:bg-slate-200  transition">
+            Sign Up</button>
+          <button onclick="url()"
+            class="py-3 px-10 hidden md:block border-slatext-slate-700 border text-white rounded-full text-2xl font-semibold bg-slate-600 hover:bg-slate-500 transition">
+            Sign in</button>
+
+          <div class="bg-[#EBFAF6] cursor-pointer rounded-full px-4 py-3">
+            <i class="ri-global-line text-3xl hover:text-[#34C9A4]"></i>
+          </div>
+          <div class="bg-[#EBFAF6] cursor-pointer rounded-full px-3 py-4 text-xl font-semibold hover:text-[#34C9A4]">
+            USD
+          </div>
+
+
+
+          <label class="burger mr-5 md:hidden" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+
+        </div>
+      </div>
+
+
+
+
+      <div class="hidden" id="mobile">
+
+        <div class="p-5 flex flex-col  text-slate-700 *:text-2xl *:font-medium *:p-5">
+          <a href="#" class="hover:text-[#34C9A4]"> Buy Crypto </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Markets </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Trade </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Derivatives </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Earn </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Institutional </a>
+          <a href="#" class="hover:text-[#34C9A4]"> More </a>
+          <div>
+            <button onclick="url()"
+              class="py-3 px-10 border  bg-slatext-slate-700 text-slate-600 rounded-full text-2xl font-semibold hover:bg-slate-200  transition">
+              Sign Up</button>
+            <button onclick="url()"
+              class="py-3 px-10  border-slatext-slate-700 border text-white rounded-full text-2xl font-semibold bg-slate-600 hover:bg-slate-500 transition">
+              Sign in</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+  <main class="custom">
+
+    <section class="bg-[url('./assets/images/2080bd1d34da69f69b98.png')] bg-no-repeat py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="text-xl text-slate-500">
+          <span class="hover:text-slate-700 cursor-pointer">Home</span> <i class="ri-arrow-right-s-line"></i> <span
+            class="hover:text-slate-700 cursor-pointer">Crypto Converter</span> <i class="ri-arrow-right-s-line"></i>
+          <span class="text-slate-800 cursor-pointer">BTC to USD</span>
+        </div>
+
+        <div class="py-10">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="*:mb-10 md:*:mb-16">
+              <div class="text-center md:text-start text-5xl md:text-8xl text-slate-800 font-semibold">BTC to USD</div>
+              <div class="text-center md:text-start text-2xl md:text-4xl text-slate-600">1 BTC equals $ <span class="bitcoin text-slate-700"></span>
+                unified Stable Dollar.</div>
+              <p class="text-center md:text-start text-slate-500">The live BTC price is <span class="bitcoin text-slate-700"></span> USD. This means you
+                can buy <span class="btc8_to_usd"></span> BTC with 1 USD. Conversely, you'll need <span class="bitcoin text-slate-700"></span> USD to buy 1 BTC.</p>
+              <button onclick="url()"
+                class="py-6 px-10  border-slatext-slate-700 border  text-white rounded-full text-3xl  bg-slate-900 hover:bg-slate-800 transition flex items-center mx-auto md:mx-0">
+                Buy Bitcoin (BTC) <i class="ri-arrow-right-line pl-5"></i></button>
+            </div>
+
+            <div class="border rounded-3xl p-10 bg-white h-fit max-w-full md:max-w-[50rem]">
+
+              <h2>Crypto Converter</h2>
+
+
+              <div class="*:my-7 ">
+                <!-- ------------------------------ -->
+
+                <div class="relative">
+                  <input
+                    class="block w-full p-12 ps-40 pe-10 text-6xl text-right text-gray-900 border border-gray-300 rounded-3xl  focus:ring-green-500 focus:border-green-500" placeholder="0.00"
+                    value="" id="input1" />
+
+                  <div class="absolute top-[50%] -translate-y-[50%]  left-12">
+                    <div class="text-xl text-slate-500 pb-3">From</div>
+                    <div class="flex gap-2 items-center default" id="icon_cryto1">
+                      <img class="  max-w-[3rem] rounded-full " src="./assets/images/USD.png" alt="">
+                      <div class="font-semibold text-slate-800 text-3xl">USD</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="flex justify-center">
+                  <div
+                    class="flex justify-center items-center  w-[4rem] h-[4rem] rounded-2xl border hover:bg-slate-200 cursor-pointer transition-all"
+                    id="change_icon">
+                    <svg class="h-12 w-12 text-[#01BC8D] " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                      fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" />
+                      <polyline points="16 3 20 7 16 11" />
+                      <line x1="6" y1="7" x2="20" y2="7" />
+                      <polyline points="8 13 4 17 8 21" />
+                      <line x1="4" y1="17" x2="17" y2="17" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <input
+                    class="block w-full p-12 ps-40 pe-10 text-6xl text-right text-gray-900 border border-gray-300 rounded-3xl  focus:ring-green-500 focus:border-green-500"
+                    value="" id="input2" placeholder="0"/>
+                  <div class="absolute top-[50%] -translate-y-[50%]  left-12 ">
+
+                    <div class="text-xl text-slate-500 pb-3">To</div>
+                    <div class="flex gap-2 items-center" id="icon_cryto2">
+                      <img class="  max-w-[3rem] " src="./assets/images/60bf8a90db892b0006d73786_BTC.png" alt="">
+                      <div>
+                        <div class="font-semibold text-slate-800 text-3xl">BTC</div>
+                        <div class=" text-slate-500 text-xl">Bitcoin</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- ------------------------------ -->
+              </div>
+
+              <div class="float-left ml-3">
+                <div class="flex items-center justify-center">
+                  <div class="flex items-center gap-5">
+                    <div class="text-xl">Last update: <span class="text-slate-900 font-medium time"></span></div>
+                    <div  class="text-[#3BCBA7] hover:text-[#2a846e] cursor-pointer text-2xl transition-all duration-200" id="refresh">
+                      <i class="ri-reset-right-line pr-1"></i>Refresh
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+          <div class="mt-8">
+            <div class="text-xl text-slate-500 pb-3">Share</div>
+            <div class="flex items-center gap-5 w-fit *:max-w-[3rem] *:cursor-pointer">
+              <img src="./assets/images/linkedin-h5.ac202eaa.svg" alt="">
+              <img src="./assets/images/twitter-h5.19fbc983.svg" alt="">
+              <img src="./assets/images/facebook-h5.94b51e23.svg" alt="">
+              <img src="./assets/images/telegram-h5.a67b5726.svg" alt="">
+              <img src="./assets/images/vk-h5.c6400bcf.svg" alt="">
+              <img src="./assets/images/line-h5.b1f6554f.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="container mx-auto max-w-screen-xl">
+      <div>
+        <h1 class="text-center md:text-start py-2">Bitcoin Markets</h1>
+        <p><span class="underline text-[#01BC8D] cursor-pointer">The live price of Bitcoin </span>is <span class="bitcoin text-slate-800">60,546.85</span> <span class="text-slate-900">USD</span> . This means that 1 Bitcoin
+          is worth <span class="bitcoin"></span> USD. Conversely, 1 USD will allow you to purchase <span class="btc8_to_usd"></span> Bitcoin.</p>
+        <p>The value of Bitcoin has declined by <span class="text-red-600 CHANGEPCTDAY"></span> over the past 24 hours, while
+          declined by <span class="text-red-600 CHANGEPCT24HOUR"></span> over the past 7 days.</p>
+        <P>Over the past month, the price of BTC/USD has had a change of <span class="text-[#01BC8D] cursor-pointer">
+            +9.09%.</span></P>
+        <P>With a circulating supply of <span class="CIRCULATINGSUPPLY"></span>  Bitcoin, Bitcoin currently has a market cap of <span class="CIRCULATINGSUPPLYMKTCAP"></span>,  down --% over the past 24 hours.</P>
+      </div>
+
+      <div class="mt-10 md:mt-20">
+        <div class="flex items-center flex-wrap gap-8 md:gap-40">
+          <div>
+
+            <!-- Component Start -->
+            <div class="relative flex flex-col items-center group">
+              <div class="flex items-center text-2xl text-slate-500 gap-2">Hight 24h<svg class="ICInfo_svg__icon"
+                  viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path
+                    d="M512 234.656a53.216 53.216 0 0137.728 91.008 53.44 53.44 0 01-91.072-37.696A53.344 53.344 0 01512 234.656zm-74.656 192C437.344 403.104 456.448 384 480 384h42.656c23.552 0 42.656 19.104 42.656 42.656v256h32a42.656 42.656 0 010 85.312H447.968a42.656 42.656 0 010-85.312h32V469.312a42.656 42.656 0 01-42.656-42.656z">
+                  </path>
+                  <path
+                    d="M42.656 512C42.656 252.8 252.768 42.656 512 42.656S981.344 252.768 981.344 512c0 259.2-210.144 469.344-469.344 469.344S42.656 771.2 42.656 512zM512 128c-212.064 0-384 171.936-384 384s171.936 384 384 384 384-171.936 384-384-171.936-384-384-384z">
+                  </path>
+                </svg></div>
+              <div class="absolute bottom-3 flex-col items-center hidden mb-5 group-hover:flex w-[35rem]">
+                <span
+                  class="relative rounded-md z-10 p-4 text-2xl  text-white whitespace-no-wrap bg-gray-800 shadow-lg">The
+                  market cap is calculated by multiplying the asset's circulating supply by its current price.</span>
+                <div class="w-4 h-4 -mt-3 rotate-45 bg-gray-800"></div>
+              </div>
+            </div>
+            <!-- Component End  -->
+            <h2 id="hight24h"></h2>
+
+          </div>
+
+          <div>
+
+            <!-- Component Start -->
+            <div class="relative flex flex-col items-center group">
+              <div class="flex items-center text-2xl text-slate-500 gap-2">24h Volume<svg class="ICInfo_svg__icon"
+                  viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                  <path
+                    d="M512 234.656a53.216 53.216 0 0137.728 91.008 53.44 53.44 0 01-91.072-37.696A53.344 53.344 0 01512 234.656zm-74.656 192C437.344 403.104 456.448 384 480 384h42.656c23.552 0 42.656 19.104 42.656 42.656v256h32a42.656 42.656 0 010 85.312H447.968a42.656 42.656 0 010-85.312h32V469.312a42.656 42.656 0 01-42.656-42.656z">
+                  </path>
+                  <path
+                    d="M42.656 512C42.656 252.8 252.768 42.656 512 42.656S981.344 252.768 981.344 512c0 259.2-210.144 469.344-469.344 469.344S42.656 771.2 42.656 512zM512 128c-212.064 0-384 171.936-384 384s171.936 384 384 384 384-171.936 384-384-171.936-384-384-384z">
+                  </path>
+                </svg></div>
+              <div class="absolute bottom-3 flex-col items-center hidden mb-5 group-hover:flex w-[35rem]">
+                <span
+                  class="relative rounded-md z-10 p-4 text-2xl  text-white whitespace-no-wrap bg-gray-800 shadow-lg">The
+                  total value of all transactions for this asset over the past 24 hours.</span>
+                <div class="w-4 h-4 -mt-3 rotate-45 bg-gray-800"></div>
+              </div>
+            </div>
+            <!-- Component End  -->
+            <h2 id="VOLUME24HOUR"></h2>
+
+          </div>
+
+          <div>
+
+            <!-- Component Start -->
+            <div class="relative flex flex-col items-center group">
+              <div class="flex items-center text-2xl text-slate-500 gap-2">Circulating Supply<svg
+                  class="ICInfo_svg__icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor">
+                  <path
+                    d="M512 234.656a53.216 53.216 0 0137.728 91.008 53.44 53.44 0 01-91.072-37.696A53.344 53.344 0 01512 234.656zm-74.656 192C437.344 403.104 456.448 384 480 384h42.656c23.552 0 42.656 19.104 42.656 42.656v256h32a42.656 42.656 0 010 85.312H447.968a42.656 42.656 0 010-85.312h32V469.312a42.656 42.656 0 01-42.656-42.656z">
+                  </path>
+                  <path
+                    d="M42.656 512C42.656 252.8 252.768 42.656 512 42.656S981.344 252.768 981.344 512c0 259.2-210.144 469.344-469.344 469.344S42.656 771.2 42.656 512zM512 128c-212.064 0-384 171.936-384 384s171.936 384 384 384 384-171.936 384-384-171.936-384-384-384z">
+                  </path>
+                </svg></div>
+              <div class="absolute bottom-3 flex-col items-center hidden mb-5 group-hover:flex w-[35rem]">
+                <span
+                  class="relative rounded-md z-10 p-4 text-2xl  text-white whitespace-no-wrap bg-gray-800 shadow-lg">The
+                  amount of this asset circulating in the market and in the hands of the public. Analogous to the
+                  outstanding shares in the stock market.</span>
+                <div class="w-4 h-4 -mt-3 rotate-45 bg-gray-800"></div>
+              </div>
+            </div>
+            <!-- Component End  -->
+            <h2 id="MKTCAP"></h2>
+
+          </div>
+
+        </div>
+        <button onclick="url()"
+          class="py-4 px-10 mt-8 border-slatext-slate-700 border text-white rounded-full text-2xl font-semibold bg-slate-900 hover:bg-slate-800 transition">Learn
+          More</button>
+
+        <div class="mt-10 md:mt-20">
+          <button onclick="url()"
+            class="py-3 px-6 mt-8 border-slatext-slate-700 border text-white rounded-full text-2xl font-semibold bg-slate-900 hover:bg-slate-800 transition">Spot</button>
+          <div class="grid-template gap-5  *:mx-auto mt-10">
+
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                  {
+                    "symbol": "BINANCE:BTCUSDT",
+                      "width": "100%",
+                        "isTransparent": false,
+                          "colorTheme": "light",
+                            "locale": "en"
+                  }
+                </script>
+            </div>
+
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                  {
+                    "symbol": "BITSTAMP:BTCUSD",
+                      "width": "100%",
+                        "isTransparent": false,
+                          "colorTheme": "light",
+                            "locale": "en"
+                  }
+                </script>
+            </div>
+
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                  {
+                    "symbol": "BINANCE:BTCUSDT.P",
+                      "width": "100%",
+                        "isTransparent": false,
+                          "colorTheme": "light",
+                            "locale": "en"
+                  }
+                </script>
+            </div>
+
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                  {
+                    "symbol": "BYBIT:BTCUSDT.P",
+                      "width": "100%",
+                        "isTransparent": false,
+                          "colorTheme": "light",
+                            "locale": "en"
+                  }
+                </script>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <div class="text-3xl md:text-6xl font-medium mb-10">BTC to USD Exchange Rate: How much is 1 Bitcoin in unified
+            Stable Dollar?</div>
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                {
+                  "symbols": [
+                    [
+                      "BITSTAMP:BTCUSD|ALL"
+                    ]
+                  ],
+                    "chartOnly": false,
+                      "width": "100%",
+                        "height": "100%",
+                          "locale": "en",
+                            "colorTheme": "light",
+                              "autosize": true,
+                                "showVolume": false,
+                                  "showMA": false,
+                                    "hideDateRanges": false,
+                                      "hideMarketStatus": false,
+                                        "hideSymbolLogo": false,
+                                          "scalePosition": "right",
+                                            "scaleMode": "Normal",
+                                              "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                                                "fontSize": "10",
+                                                  "noTimeScale": false,
+                                                    "valuesTracking": "1",
+                                                      "changeMode": "price-and-percent",
+                                                        "chartType": "area",
+                                                          "maLineColor": "#2962FF",
+                                                            "maLineWidth": 1,
+                                                              "maLength": 9,
+                                                                "headerFontSize": "medium",
+                                                                  "lineWidth": 2,
+                                                                    "lineType": 0,
+                                                                      "dateRanges": [
+                                                                        "1d|1",
+                                                                        "1m|30",
+                                                                        "3m|60",
+                                                                        "12m|1D",
+                                                                        "60m|1W",
+                                                                        "all|1M"
+                                                                      ]
+                }
+              </script>
+          </div>
+          <div class="text-xl">The current value of Bitcoin is $60,822.08, following a -1.49% change over the past 24
+            hours. The Bitcoin to USD price chart shown above displays Bitcoin to USD price changes over the past 24
+            hours. Click on the various time duration options on the upper right of the price chart to view Bitcoin to
+            USD price information over the past 24 hours, 7 days, 90 days, etc.</div>
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <div class="text-3xl md:text-6xl font-medium mb-10">Bitcoin Conversion Rates </div>
+          <h4>Bitcoin to USD exchange rate is declining.</h4>
+          <p>The Bitcoin to USD exchange rate dropped by -10.73% over the past week. The price of Bitcoin has declined
+            by -0.93% over the past 24 hours. Within the last 24 hours, the highest exchange rate for 1 Bitcoin to USD
+            was recorded at $62,156.98, while the lowest exchange rate for 1 Bitcoin to USD during the same period was
+            $59,821.68. The price of 1 Bitcoin today is +9.09% higher than the price of 1 Bitcoin at the same time one
+            month ago, which was $55,715.25. The price of 1 Bitcoin a year ago was $29,056.45, indicating a yearly
+            increase of +109.18%.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 *:my-2 md:*:my-12">
+            <div class="border rounded-3xl p-8 md:p-10">
+              <h5 class="font-semibold">Conversion Rate: BTC to USD</h5>
+              <div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-xl text-slate-500">Amount</div>
+                  <div class="text-xl text-slate-500">Last Update: <span class="text-slate-800 font-medium time" > Aug 4, 2024, 1:54 PM</span> </div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" > 0.5 </span>
+                    BTC</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc1"></span> USD</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 5 </span> BTC
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc2"></span> USD</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 10 </span> BTC
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"id="usd_to_btc3"> </span> USD</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 50 </span> BTC
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc4"> </span> USD</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 100 </span>
+                    BTC</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc5">   </span> USD</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 500 </span>
+                    BTC</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc6">  </span> USD</div>
+                </div>
+                <div class="flex justify-between pt-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 1000 </span>
+                    BTC</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="usd_to_btc7"> </span> USD</div>
+                </div>
+              </div>
+            </div>
+            <div class="border rounded-3xl p-8 md:p-10">
+              <h5 class="font-semibold">Conversion Rate: USD to BTC</h5>
+              <div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-xl text-slate-500">Amount</div>
+                  <div class="text-xl text-slate-500">Last Update: <span class="text-slate-800 font-medium time"> Aug 4,
+                      2024, 1:54 PM</span> </div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 0.5 </span>
+                    USD</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium" id="btc1_to_usd"> 0.00000034</span> BTC</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 5 </span> USD
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc2_to_usd"> </span> BTC</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 10 </span> USD
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc3_to_usd"> </span> BTC</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 50 </span> USD
+                  </div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc4_to_usd"> </span> BTC</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 100 </span>
+                    USD</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc5_to_usd"> </span> BTC</div>
+                </div>
+                <div class="flex justify-between border-b py-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 500 </span>
+                    USD</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc6_to_usd"> </span> BTC</div>
+                </div>
+                <div class="flex justify-between  pt-8">
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium"> 1000 </span>
+                    USD</div>
+                  <div class="text-2xl text-slate-500"><span class="text-slate-800 text-2xl font-medium " id="btc7_to_usd"> </span> BTC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <div class="text-3xl md:text-6xl font-medium mb-10 mx-auto w-fit">Start Buying Bitcoin Today</div>
+          <button onclick="url()"
+            class="py-6 px-10  border-slatext-slate-700 border  text-white rounded-full text-3xl  bg-slate-900 hover:bg-slate-800 transition flex items-center mx-auto  ">
+            Learn More <i class="ri-arrow-right-line pl-5"></i></button>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10 mt-8 md:mt-16">
+            <div class="text-center">
+              <div class="flex justify-center">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M92.6619 88.7141C94.5161 89.7846 94.5257 91.5242 92.681 92.5947L62.9749 109.856C61.1302 110.927 58.129 110.927 56.2748 109.856L26.3967 92.5947C24.5424 91.5242 24.5329 89.7942 26.3776 88.7237L56.0741 71.462C57.9188 70.3916 60.92 70.3916 62.7742 71.462L92.6715 88.7237L92.6619 88.7141Z"
+                    fill="#121212" stroke="#121212" stroke-miterlimit="10"></path>
+                  <mask id="mask0_3800_56091" maskUnits="userSpaceOnUse" x="16" y="31" width="89" height="74"
+                    style="mask-type: alpha;">
+                    <path
+                      d="M102.583 33.7305L63.6372 56.3622C61.8624 57.3922 58.9748 57.3922 57.1907 56.3622L17.9784 33.7305C17.0772 33.2155 16.6357 32.535 16.6357 31.8545L16.5254 78.8831C16.5254 79.5636 16.9668 80.2442 17.868 80.7591L57.0712 103.391C58.8552 104.421 61.7428 104.421 63.5177 103.391L102.463 80.7591C103.346 80.2442 103.788 79.582 103.788 78.9107L103.898 31.8821C103.898 32.5534 103.457 33.2247 102.574 33.7305H102.583Z"
+                      fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  </mask>
+                  <g mask="url(#mask0_3800_56091)">
+                    <rect x="60.35" y="43.35" width="51.3" height="71.3" fill="white" stroke="#121212"
+                      stroke-width="0.7"></rect>
+                    <rect x="9.35" y="43.35" width="51.3" height="71.3" fill="white" stroke="#121212"
+                      stroke-width="0.7"></rect>
+                  </g>
+                  <path
+                    d="M102.583 44.7286L63.6377 67.3603C61.8629 68.3902 58.9753 68.3902 57.1912 67.3603L17.9789 44.7286C17.0776 44.2136 16.6362 43.5331 16.6362 42.8525L16.5259 78.8812C16.5259 79.5617 16.9673 80.2422 17.8685 80.7572L57.0717 103.389C58.8557 104.419 61.7433 104.419 63.5182 103.389L102.464 80.7572C103.347 80.2422 103.788 79.5801 103.788 78.9088L103.898 42.8801C103.898 43.5514 103.457 44.2228 102.574 44.7286H102.583Z"
+                    stroke="#121212" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M102.555 41.4042C104.339 42.4341 104.349 44.0986 102.574 45.1286L63.6282 67.7603C61.8533 68.7903 58.9657 68.7903 57.1817 67.7603L17.9785 45.1378C16.1945 44.1078 16.1945 42.4341 17.9601 41.4042L56.915 18.7725C58.6898 17.7425 61.5682 17.7425 63.3523 18.7725L102.555 41.4042Z"
+                    fill="white" stroke="#121212" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M51.223 79.5868V83.1484C51.223 83.8172 50.8153 84.1259 50.3128 83.837L22.9952 68.063C22.4926 67.7741 22.085 66.9906 22.085 66.3218V62.7601C22.085 62.0874 22.4965 61.7787 22.9952 62.0716L24.1863 62.7601L50.3128 77.8456C50.8193 78.1345 51.223 78.9141 51.223 79.5868Z"
+                    fill="#EBE9E9" stroke="#1D1D1D" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M51.2247 79.5869V81.9297L25.0982 66.8442C24.5956 66.5554 24.188 65.7758 24.188 65.107V62.7603L50.3144 77.8457C50.821 78.1346 51.2247 78.9142 51.2247 79.5869Z"
+                    fill="#000D1D" stroke="#1D1D1D" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M68.999 79.5858V83.1475C68.999 83.8162 69.4066 84.1249 69.9092 83.836L97.2268 68.062C97.7294 67.7731 98.137 66.9896 98.137 66.3208V62.7592C98.137 62.0864 97.7254 61.7777 97.2268 62.0706L96.0356 62.7592L69.9092 77.8446C69.4026 78.1335 68.999 78.9131 68.999 79.5858Z"
+                    fill="#EBE9E9" stroke="#1D1D1D" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M68.9995 79.5864V81.9292L95.1259 66.8438C95.6285 66.5549 96.0361 65.7753 96.0361 65.1065V62.7598L69.9097 77.8452C69.4031 78.1341 68.9995 78.9137 68.9995 79.5864Z"
+                    fill="#000D1D" stroke="#1D1D1D" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M62.1822 40.6802C60.7626 39.9657 60.6909 38.6709 62.0246 37.7891C63.3564 36.9094 65.5944 36.7751 67.012 37.4898C68.4337 38.2062 68.5014 39.5012 67.1696 40.3809C65.8359 41.2627 63.6019 41.3968 62.1822 40.6802Z"
+                    fill="#01BC8D" stroke="#12192D" stroke-width="0.7" stroke-miterlimit="10" stroke-linejoin="round">
+                  </path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M74.2033 35.7325C74.8214 35.3253 75.6898 35.0424 76.6632 34.986C78.6098 34.8692 80.2366 35.6887 80.2962 36.8151L80.7561 45.2405C80.7857 45.7998 80.4139 46.3334 79.7959 46.7425C79.1758 47.1517 78.3057 47.4367 77.3423 47.4945L56.3657 48.7515L62.797 51.9922C64.2104 52.7032 64.2825 54.0039 62.9564 54.8792C61.6245 55.7589 59.3905 55.893 57.9709 55.1785L37.8322 45.0375C36.4126 44.323 36.3428 43.0281 37.6747 42.1484C39.0065 41.2687 41.2386 41.1347 42.6582 41.8513L49.0895 45.09L48.4295 32.9345C48.4001 32.3772 48.7698 31.8417 49.3918 31.4324C50.0098 31.0233 50.8762 30.7405 51.8434 30.6805L66.3834 29.8078C68.33 29.691 69.9568 30.5105 70.0185 31.6387C70.0484 32.2019 69.6826 32.7372 69.0645 33.1443C68.4463 33.5514 67.578 33.8343 66.6047 33.8927L55.5872 34.554L56.1386 44.6689L73.5966 43.6231L73.2513 37.2399C73.2194 36.6748 73.5852 36.1396 74.2033 35.7325Z"
+                    fill="#01BC8D" stroke="#12192D" stroke-width="0.7" stroke-miterlimit="10" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="pb-5">Create Your Free KuCoin Account</h3>
+              <p>Sign up on KuCoin with your email address/mobile phone number and country of residence, and create a
+                strong password to secure your account.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="flex justify-center">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M80 103.75C80 104.202 79.8438 104.655 79.5313 105.096C78.7389 106.222 76.9445 107.295 74.1404 108.169C66.3301 110.61 53.6699 110.61 45.8596 108.169C43.0555 107.295 41.2573 106.222 40.4686 105.096C40.1562 104.653 40 104.202 40 103.75C40 102.152 41.9507 100.554 45.8596 99.3311C53.6699 96.8896 66.3301 96.8896 74.1404 99.3311C78.0455 100.552 80 102.15 80 103.75Z"
+                    fill="#121212" stroke="#121212" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M26.002 64.8925L26.5082 31.0573L40.2463 23.9619L39.7477 57.7971L26.002 64.8925Z" fill="white"
+                    stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M67.8683 15.6471C69.18 16.046 70.4764 17.0125 71.4735 18.4546C75.5083 24.3073 82.7571 32.9674 92.0692 36.2888C93.7261 36.8795 95.0224 38.7971 94.9994 40.6994L94.5008 74.5346C94.2477 91.855 70.4687 98.7048 66.6641 97.5389C62.8594 96.373 39.487 75.1176 39.7478 57.7973L40.2464 23.9621C40.277 22.0598 41.6194 20.9475 43.2763 21.3694C52.6038 23.7473 60.0443 19.5822 64.2171 16.2378C65.245 15.417 66.5643 15.2482 67.8683 15.6471Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M41.5504 21.5311C40.7757 21.93 40.2618 22.8044 40.2464 23.9704L26.5083 31.058C26.5236 29.8921 27.0376 29.0253 27.8123 28.6188C31.9314 26.4863 37.4313 23.6482 41.5504 21.5234V21.5311Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M66.5567 100.944C60.6043 104.02 54.6596 105.171 52.9107 104.634C49.106 103.468 25.7489 82.2125 26.002 64.8922L39.7402 57.7969C39.487 75.1172 62.8365 96.3725 66.6488 97.5385C68.3977 98.0754 74.3424 96.9248 80.2948 93.8489C76.1757 95.9813 70.6759 98.8195 66.5567 100.944Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M45.6465 26.4935C47.5488 25.5117 49.175 24.3841 50.479 23.3332C50.6708 23.1798 50.8702 23.0494 51.085 22.942L64.8231 15.8467C64.616 15.9541 64.4089 16.0845 64.2171 16.2379C62.9131 17.2811 61.2869 18.4087 59.3846 19.3982C55.2655 21.5306 49.7656 24.3688 45.6465 26.4935Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M92.0695 36.2887C82.7496 32.9673 75.5086 24.3071 71.4738 18.4544C70.4766 17.0123 69.1803 16.0458 67.8686 15.647C66.8024 15.3248 65.7362 15.3708 64.8233 15.8464L54.0001 21.4383C50.8321 22.2207 47.2269 22.3818 43.2765 21.3769C42.6322 21.2159 42.0415 21.2772 41.5506 21.5304L27.8125 28.6257C28.3034 28.3726 28.8941 28.3035 29.5384 28.4723C35.9511 30.1061 41.4662 28.6487 45.6467 26.4933L53.2407 22.5736C53.5322 22.6042 53.8313 22.6579 54.1305 22.75C55.4422 23.1489 56.7385 24.1154 57.7357 25.5574C61.7704 31.4101 69.0192 40.0703 78.3313 43.3917C79.9882 43.9823 81.2845 45.9 81.2615 47.8023L80.7629 81.6375C80.6249 91.0187 73.5909 97.324 66.5646 100.952L80.3027 93.8568C87.329 90.2286 94.3553 83.9234 94.5011 74.5422L94.9996 40.707C95.0303 38.8046 93.7263 36.8793 92.0695 36.2963V36.2887Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M92.0695 36.2887C82.7496 32.9673 75.5086 24.3071 71.4738 18.4544C70.4766 17.0123 69.1803 16.0458 67.8686 15.647C66.8024 15.3248 65.7362 15.3708 64.8233 15.8464L54.0001 21.4383C50.8321 22.2207 47.2269 22.3818 43.2765 21.3769C42.6322 21.2159 42.0415 21.2772 41.5506 21.5304L27.8125 28.6257C28.3034 28.3726 28.8941 28.3035 29.5384 28.4723C35.9511 30.1061 41.4662 28.6487 45.6467 26.4933L53.2407 22.5736C53.5322 22.6042 53.8313 22.6579 54.1305 22.75C55.4422 23.1489 56.7385 24.1154 57.7357 25.5574C61.7704 31.4101 69.0192 40.0703 78.3313 43.3917C79.9882 43.9823 81.2845 45.9 81.2615 47.8023L80.7629 81.6375C80.6249 91.0187 73.5909 97.324 66.5646 100.952L80.3027 93.8568C87.329 90.2286 94.3553 83.9234 94.5011 74.5422L94.9996 40.707C95.0303 38.8046 93.7263 36.8793 92.0695 36.2963V36.2887Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <mask id="mask0_4198_78624" maskUnits="userSpaceOnUse" x="27" y="15" width="69" height="87"
+                    style="mask-type: alpha;">
+                    <path
+                      d="M92.0695 36.2887C82.7496 32.9673 75.5086 24.3071 71.4738 18.4544C70.4766 17.0123 69.1803 16.0458 67.8686 15.647C66.8024 15.3248 65.7362 15.3708 64.8233 15.8464L54.0001 21.4383C50.8321 22.2207 47.2269 22.3818 43.2765 21.3769C42.6322 21.2159 42.0415 21.2772 41.5506 21.5304L27.8125 28.6257C28.3034 28.3726 28.8941 28.3035 29.5384 28.4723C35.9511 30.1061 41.4662 28.6487 45.6467 26.4933L53.2407 22.5736C53.5322 22.6042 53.8313 22.6579 54.1305 22.75C55.4422 23.1489 56.7385 24.1154 57.7357 25.5574C61.7704 31.4101 69.0192 40.0703 78.3313 43.3917C79.9882 43.9823 81.2845 45.9 81.2615 47.8023L80.7629 81.6375C80.6249 91.0187 73.5909 97.324 66.5646 100.952L80.3027 93.8568C87.329 90.2286 94.3553 83.9234 94.5011 74.5422L94.9996 40.707C95.0303 38.8046 93.7263 36.8793 92.0695 36.2963V36.2887Z"
+                      fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  </mask>
+                  <g mask="url(#mask0_4198_78624)">
+                    <path d="M99.5 37.5L77 49L65 107L97.5 105L99.5 37.5Z" fill="#EBE9E9"></path>
+                    <path d="M99.5 34.5L77 46L65 104L97.5 102L99.5 34.5Z" stroke="#EBE9E9" stroke-width="0.7"></path>
+                    <path
+                      d="M92.0695 36.2887C82.7496 32.9673 75.5086 24.3071 71.4738 18.4544C70.4766 17.0123 69.1803 16.0458 67.8686 15.647C66.8024 15.3248 65.7362 15.3708 64.8233 15.8464L54.0001 21.4383C50.8321 22.2207 47.2269 22.3818 43.2765 21.3769C42.6322 21.2159 42.0415 21.2772 41.5506 21.5304L27.8125 28.6257C28.3034 28.3726 28.8941 28.3035 29.5384 28.4723C35.9511 30.1061 41.4662 28.6487 45.6467 26.4933L53.2407 22.5736C53.5322 22.6042 53.8313 22.6579 54.1305 22.75C55.4422 23.1489 56.7385 24.1154 57.7357 25.5574C61.7704 31.4101 69.0192 40.0703 78.3313 43.3917C79.9882 43.9823 81.2845 45.9 81.2615 47.8023L80.7629 81.6375C80.6249 91.0187 73.5909 97.324 66.5646 100.952L80.3027 93.8568C87.329 90.2286 94.3553 83.9234 94.5011 74.5422L94.9997 40.707C95.0303 38.8046 93.7263 36.8793 92.0695 36.2963V36.2887Z"
+                      stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  </g>
+                  <path
+                    d="M54.1303 22.7428C55.442 23.1417 56.7383 24.1082 57.7355 25.5503C61.7702 31.403 69.019 40.0631 78.3312 43.3845C79.988 43.9752 81.2844 45.8928 81.2613 47.7951L80.7628 81.6303C80.5096 98.9507 56.7306 105.801 52.926 104.635C49.1214 103.469 25.7489 82.2133 26.002 64.893L26.5083 31.0578C26.539 29.1555 27.8813 28.0432 29.5382 28.4651C38.8657 30.843 46.3062 26.6779 50.4791 23.3335C51.5069 22.5127 52.8263 22.344 54.1303 22.7428Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M52.8191 39.1369C53.6515 39.39 54.4709 40.0002 55.1016 40.9155C57.6573 44.6157 62.2483 50.088 68.1463 52.1913C69.1998 52.5678 70.0192 53.7817 69.9997 54.9826L69.681 76.3721C69.5184 87.3298 54.4579 91.6596 52.0453 90.9196C49.6327 90.1795 34.8388 76.7486 35.0013 65.7845L35.32 44.395C35.3395 43.1941 36.1914 42.4865 37.2448 42.7526C43.1559 44.2522 47.864 41.6166 50.5041 39.5069C51.1544 38.9876 51.9933 38.8772 52.8191 39.1304V39.1369Z"
+                    fill="#00C27C" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M51.0816 52.1884C53.8451 52.9688 56.0433 55.9856 55.9994 58.9208C55.9554 61.8561 53.6755 63.5975 50.9121 62.8112C48.1486 62.025 45.9567 59.0198 46.0006 56.0846C46.0446 53.1493 48.3182 51.4021 51.0816 52.1884Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path
+                    d="M51.132 64.3629C55.6345 65.7212 59.3216 70.5476 59.9848 75.6264C60.1065 76.558 59.4798 77.1891 58.6828 76.9486L43.2709 72.2966C42.4739 72.0562 41.8715 71.0524 42.0236 70.205C42.8328 65.5709 46.6295 63.0045 51.132 64.3629Z"
+                    fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="10"></path>
+                  <path d="M91.2102 68.1709L84.5288 72.0269" stroke="#121212" stroke-width="0.7" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M91.2102 72.8711L84.5288 76.7271" stroke="#121212" stroke-width="0.7" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M91.2102 59.1709L84.5288 63.0269" stroke="#121212" stroke-width="0.7" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M91.2102 63.8711L84.5288 67.7271" stroke="#121212" stroke-width="0.7" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M91.2102 54.8711L84.5288 58.7271" stroke="#121212" stroke-width="0.7" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <h3 class="pb-5">Verify Your Account</h3>
+              <p><span class="text-[#01BC8D] cursor-pointer">Verify your identity </span> by entering your personal
+                information and uploading a valid Photo ID.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="flex justify-center">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M95.9152 66.7521C95.6818 65.4564 94.91 64.2273 93.7906 63.5843L45.8541 35.9076C45.3349 35.6075 44.8061 35.4692 44.2964 35.4692H39.8329V41.4619L40.2092 42.0431L32.2921 66.7569L30.4819 72.4161C29.8816 74.2977 30.7867 76.6414 32.4969 77.6275L77.4847 103.599L77.5323 105.742H81.9958C83.1724 105.742 84.2204 104.99 84.6396 103.68L95.8151 68.8005C96.0247 68.1479 96.0485 67.4429 95.9247 66.7569L95.9152 66.7521Z"
+                    fill="black" stroke="black" stroke-width="0.862633" stroke-miterlimit="10"></path>
+                  <path
+                    d="M95.9152 66.7521C95.6818 65.4564 94.91 64.2273 93.7906 63.5843L45.8541 35.9076C45.3349 35.6075 44.8061 35.4692 44.2964 35.4692H39.8329V41.4619L40.2092 42.0431L32.2921 66.7569L30.4819 72.4161C29.8816 74.2977 30.7867 76.6414 32.4969 77.6275L77.4847 103.599L77.5323 105.742H81.9958C83.1724 105.742 84.2204 104.99 84.6396 103.68L95.8151 68.8005C96.0247 68.1479 96.0485 67.4429 95.9247 66.7569L95.9152 66.7521Z"
+                    stroke="black" stroke-width="0.862633" stroke-miterlimit="10"></path>
+                  <path
+                    d="M80.1666 103.68C79.5664 105.562 77.6705 106.29 75.9651 105.304L28.0286 77.6274C26.3185 76.6414 25.4134 74.2929 26.0136 72.416L37.1891 37.5367C37.7893 35.655 39.6852 34.9262 41.3906 35.9123L89.3271 63.589C91.0372 64.5751 91.9423 66.9236 91.3421 68.8005L80.1666 103.68Z"
+                    fill="#EBE9E9" stroke="black" stroke-width="0.862633" stroke-miterlimit="10"></path>
+                  <path
+                    d="M91.3422 68.7961C91.9424 66.9145 91.0373 64.5707 89.3272 63.5846L41.3907 35.9079C39.6806 34.9218 37.7894 35.6506 37.1892 37.5323L27.8861 66.2448L82.0391 97.5181L91.3469 68.7961H91.3422Z"
+                    fill="#66DE8C" stroke="black" stroke-width="0.862633"></path>
+                  <path
+                    d="M78.3385 86.2072C77.7383 88.0889 75.8423 88.8177 74.137 87.8316L26.2005 60.1548C24.4903 59.1687 23.5853 56.8203 24.1855 54.9434L35.361 20.064C35.9612 18.1824 37.8571 17.4536 39.5625 18.4397L87.499 46.1163C89.2091 47.1024 90.1142 49.4509 89.514 51.3277L78.3385 86.2072Z"
+                    fill="white" stroke="black" stroke-width="0.862633" stroke-miterlimit="10"></path>
+                  <path d="M56.7211 36.8408L55.7207 39.9706L39.6577 30.6958L40.6581 27.5708L56.7211 36.8408Z"
+                    fill="black"></path>
+                  <path d="M66.8628 42.6955L65.8624 45.8253L58.0977 41.3426L59.1028 38.2178L66.8628 42.6955Z"
+                    fill="black"></path>
+                  <path
+                    d="M65.9327 76.6434C68.3545 75.782 69.4293 72.586 68.3333 69.5049C67.2374 66.4238 64.3858 64.6243 61.9641 65.4857C59.5423 66.3471 58.4675 69.5432 59.5635 72.6243C60.6594 75.7054 63.511 77.5048 65.9327 76.6434Z"
+                    fill="#66DE8C"></path>
+                  <path
+                    d="M71.8687 80.076C74.2905 79.2146 75.3653 76.0186 74.2694 72.9375C73.1735 69.8565 70.3218 68.057 67.9001 68.9183C65.4783 69.7797 64.4036 72.9758 65.4995 76.0569C66.5954 79.138 69.447 80.9374 71.8687 80.076Z"
+                    fill="black"></path>
+                  <path
+                    d="M45.4886 49.4266C45.1647 50.446 44.1405 50.8414 43.2116 50.3031L36.533 46.4493C35.6088 45.9158 35.1182 44.6439 35.4421 43.6293L37.0713 38.5465C37.3952 37.5271 38.4194 37.1317 39.3483 37.67L46.0269 41.5238C46.9511 42.0573 47.4417 43.3292 47.1178 44.3438L45.4886 49.4266Z"
+                    fill="white" stroke="black" stroke-width="0.862633" stroke-miterlimit="10"></path>
+                  <path d="M37.2378 40.2759L46.2458 45.4779" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path d="M36.3281 42.6724L45.3409 47.8742" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path d="M41.3203 38.8042L40.7344 40.6381" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path d="M44.4931 40.6382L43.9072 42.4675" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path d="M38.9433 45.6685L38.3574 47.5025" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path d="M42.1113 47.5024L41.5254 49.3316" stroke="black" stroke-width="0.862633"
+                    stroke-miterlimit="10" stroke-linecap="round"></path>
+                  <path
+                    d="M90.4654 79.0229C90.9513 78.9562 91.4705 78.5227 91.6182 78.0559L93.5236 72.1061C93.6713 71.6393 93.3998 71.3106 92.9139 71.3772C92.428 71.4439 91.9088 71.8774 91.7611 72.3443L89.8556 78.2941C89.708 78.7609 89.9795 79.0896 90.4654 79.0229Z"
+                    fill="#EBE9E9" stroke="black" stroke-width="0.862633" stroke-miterlimit="10" stroke-linecap="round">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="pb-5">Add a Payment Method</h3>
+              <p>Add a credit/debit card or bank account after verifying your KuCoin account.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="flex justify-center">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_4199_78729)">
+                    <path
+                      d="M46.8399 18.7801L38.3487 22.6808L39.0688 24.2558C28.7473 34.7273 26.4669 53.7954 34.5681 71.438C42.6693 89.0806 58.6317 99.7625 73.3038 98.7423L74.0239 100.317L82.5152 96.4165C99.1376 88.7804 104.628 65.1968 94.772 43.7586C84.9155 22.3205 63.4473 11.129 46.8249 18.7801H46.8399Z"
+                      fill="#EBE9E9" stroke="black" stroke-width="0.9625" stroke-miterlimit="10"></path>
+                    <path
+                      d="M46.4203 87.9853C54.3865 95.3964 64.0929 99.3726 73.3042 98.7425L74.0243 100.317L82.5156 96.4167C93.7072 91.271 99.8131 78.9091 99.6331 64.8521L46.4053 88.0007L46.4203 87.9853Z"
+                      fill="black" stroke="black" stroke-width="0.9625" stroke-miterlimit="10"></path>
+                    <path d="M99.0172 59.07L89.6692 62.5068L88.1689 57.363L98.185 54.3604L99.0172 59.07Z" fill="black">
+                    </path>
+                    <path
+                      d="M73.5297 100.603C90.1529 92.9638 95.6414 69.3895 85.7884 47.9479C75.9355 26.5064 54.4722 15.317 37.849 22.9558C21.2257 30.5947 15.7374 54.1689 25.5903 75.6105C35.4433 97.0521 56.9064 108.241 73.5297 100.603Z"
+                      fill="#66DE8C"></path>
+                    <path
+                      d="M38.3487 22.68C25.4168 28.6209 19.2359 44.1931 21.7413 60.9056L88.021 85.449C92.5967 74.8424 92.3566 60.8605 86.2807 47.6585C76.4243 26.2204 54.9562 15.0289 38.3337 22.68H38.3487Z"
+                      fill="white"></path>
+                    <path
+                      d="M73.829 52.085L62.5173 58.521C59.937 59.9912 58.1817 58.3261 58.6018 54.8305L60.462 39.498L57.9716 38.4028L56.1114 53.7354C55.6913 57.2309 53.7261 57.2452 51.7458 53.7647L43.0744 38.523L41.0792 39.6628L49.7504 54.9053C51.7307 58.3708 50.7106 60.0506 47.4851 58.6404L33.353 52.4147L33.0229 55.1155L47.1551 61.3413C50.3806 62.7665 50.9056 65.1218 48.3252 66.592L37.0136 73.028L38.5438 75.7135L49.8555 69.2775C52.4359 67.8073 54.1911 69.4725 53.771 72.968L51.9108 88.2852L54.4011 89.3803L56.2614 74.0631C56.6815 70.5676 58.6468 70.5526 60.627 74.0331L69.2984 89.2755L71.2936 88.135L62.6224 72.8925C60.6421 69.427 61.6622 67.7471 64.8877 69.1574L79.0198 75.3831L79.3498 72.683L65.2177 66.4573C61.9922 65.032 61.4672 62.6767 64.0476 61.2065L75.3592 54.7705L73.829 52.085Z"
+                      fill="black"></path>
+                    <path
+                      d="M73.5297 100.603C90.1529 92.9638 95.6414 69.3895 85.7884 47.9479C75.9355 26.5064 54.4722 15.317 37.849 22.9558C21.2257 30.5947 15.7374 54.1689 25.5903 75.6105C35.4433 97.0521 56.9064 108.241 73.5297 100.603Z"
+                      stroke="black" stroke-width="0.9625" stroke-miterlimit="10"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4199_78729">
+                      <rect width="88" height="88" fill="white" transform="translate(16 16)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="pb-5">Buy Bitcoin (BTC)</h3>
+              <p>Use a variety of payment options to buy Bitcoin on KuCoin. We'll show you how.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <div class="text-3xl md:text-6xl font-medium mb-10 mx-auto w-fit">Cryptocurrency Market Today</div>
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+              async>
+                {
+                  "width": "100%",
+                    "height": 550,
+                      "defaultColumn": "overview",
+                        "screener_type": "crypto_mkt",
+                          "displayCurrency": "USD",
+                            "colorTheme": "light",
+                              "locale": "en"
+                }
+              </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <h1 class="text-center md:text-start py-2">Top Cryptocurrency Conversions</h1>
+          <p>Discover the exchange rates of other cryptocurrencies to fiat currencies.</p>
+          <button onclick="url()" class="py-3 px-6 mt-8 border-slatext-slate-700 border text-white rounded-full text-2xl font-semibold bg-slate-900 hover:bg-slate-800 transition">  Convert to USD
+          </button>
+
+          <div class="grid-template1 mt-8 md:mt-10 *:h-[4rem] *:w-full *:py-8 *:px-12 *:gap-2  *:bg-slatext-slate-700 *:text-slate-600 *:border *:rounded-full *:text-2xl *:font-medium *:cursor-pointer *:transition *:flex *:items-center">
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/60bf8a90db892b0006d73786_BTC.png" alt="">
+              BTC <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/60bf91f78afb0a00068efef7_ETH.png" alt="">
+              ETH <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65ddb02e1a5e52000156fc8c_SOL logo.png" alt="">
+              SOL <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65dffb093885c100016a7538_PEPE logo.png" alt="">
+              PEPE <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/60c34c418afb0a00068f786d_XRP.png" alt="">
+              XRP <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65e0277a52890a0001e6235a_XMR logo.png" alt="">
+              XMR <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65dee83b1a5e520001574d64_KAS logo.png" alt="">
+              KAS <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65dda9938dc66a0001279356_JASMY logo.png" alt="">
+              JASMY <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/60bf8fc3db892b0006d73894_DOGE.png" alt="">
+              DOGE <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            <div onclick="url()" class=" hover:bg-slate-200  "> 
+              <img class="max-w-[2.5rem] mx-0" src="./assets/images/65a8eb9ea5c2150001c084c6_WIF logo.png" alt="">
+              WIF <i class="ri-arrow-left-right-line"></i> USD
+            </div>
+            
+            
+          </div>
+        </div>
+
+        <div class="mt-10 md:mt-20">
+          <h1 class="text-start py-2">Discover More Cryptocurrencies</h1>
+          <p>A selection of cryptocurrencies trending in the crypto community.</p>
+
+          <div class="grid-template2 *:flex *:gap-3 *:items-center mt-8 md:mt-12">
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65d8148f4ec19700014470d3_IMX logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">IMX</div>
+                <div class="text-slate-500">Immutable X</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65c1a747120ba200014b17d0_XETA logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">XETA</div>
+                <div class="text-slate-500">XANA</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/60c356768afb0a00068f7a20_STRK.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">STRIKE</div>
+                <div class="text-slate-500">Strike</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65d81189120ba200014f3e43_DPET logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">DPET</div>
+                <div class="text-slate-500">My Defi Pet</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/60c34527db892b0006d7afc3_REVV.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">REVV</div>
+                <div class="text-slate-500">REVV</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65e0235df9978e0001e24eb2_SOLR logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">SOLR</div>
+                <div class="text-slate-500">Solrazr</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/6597a76ab01aba0001230746_logo - ZKF (1).png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">ZKF</div>
+                <div class="text-slate-500">ZKFair</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65e024cd3885c100016a8309_SWEAT logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">SWEAT</div>
+                <div class="text-slate-500">SWEAT Economy</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65d81756515f5800018271b9_MTS logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">MTS</div>
+                <div class="text-slate-500">Metastrike</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/65dffb3d3885c100016a753f_PIP logo.png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">PIP</div>
+                <div class="text-slate-500">PIP</div>
+              </div>
+            </div>
+            <div class="">
+              <img class="max-w-[2.5rem] h-fit mx-0" src="./assets/images/656e8cd142c339000104817a_logo (11).png" alt="">
+              <div class="">
+                <div class="text-slate-900 font-semibold text-2xl">INSP</div>
+                <div class="text-slate-500">Inspect</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 md:mt-32">
+          <p>This content is being provided to you for informational purposes only, and does not constitute an offer or solicitation of an offer. This content is not a recommendation from KuCoin to buy, sell, or hold any security, financial product, or instrument referenced in the content. This content is not investment advice, financial advice, trading advice, or any other form of advice. Data presented here may reflect prices of assets traded on the KuCoin exchange as well as other cryptocurrency exchanges or market data from other platforms. KuCoin may charge fees for the processing of cryptocurrency transactions which may not be reflected in the conversion prices displayed. KuCoin is not liable for any errors or delays in content or information, or for any actions taken in reliance on any content or information.</p>
+
+
+
+
+        </div>
+
+
+        <div class="mt-10 md:mt-20">
+          <h1 class="text-start py-2">FQA</h1>
+        </div>
+        <div class="*:mb-3 *:py-5">
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-2xl font-medium"> How does Bitcoin work?</div>
+            <div class="collapse-content">
+              <p>Unlike traditional currencies, Bitcoin is not issued or maintained by a centralized government entity.
+                Instead, a decentralized network of computer nodes is responsible for maintaining Bitcoin. This
+                decentralization means the holders and users of Bitcoin can help to maintain the network.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Where can I buy Bitcoin?</div>
+            <div class="collapse-content">
+              <p>Most find that the easiest and most secure way to purchase Bitcoin is through a reliable cryptocurrency
+                platform like Kraken. While Bitcoin can be purchased using several different methods, Kraken offers the
+                security, support and simplicity people often look for when buying cryptocurrencies like Bitcoin.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Is Bitcoin available to buy and sell in my country?</div>
+            <div class="collapse-content">
+              <p>To find out if Kraken offers Bitcoin in your region, please check our <span
+                  class="text-[#7132F5] font-semibold">Support article </span> to see what cryptoassets are available in
+                your country.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Is Bitcoin a good investment?</div>
+            <div class="collapse-content">
+              <p>The short answer is, it depends on your own individual circumstances and risk tolerance. For those that
+                see a long term prospect behind decentralization, Bitcoin may be a worthwhile purchase.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Can I purchase Bitcoin using my local currency?</div>
+            <div class="collapse-content">
+              <p>Kraken supports six different government-issued fiat currencies including:</p>
+              <ul class="text-2xl *:ml-5 *:mb-3 mt-3">
+                <li>US dollars (USD)</li>
+                <li>Euros (EUR)</li>
+                <li>Canadian dollars (CAD)</li>
+                <li>Pounds sterling (GBP)</li>
+                <li>Swiss franc (CHF)</li>
+                <li>Australian dollar (AUD)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">What are the transaction fees for buying Bitcoin?</div>
+            <div class="collapse-content">
+              <p>Kraken offers a competitive fee structure based on transaction size, asset, payment method and market
+                conditions. <span class="text-[#7132F5] font-semibold"> Learn more about Kraken’s fee structure.</span>
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">What is the minimum amount of Bitcoin I can buy?</div>
+            <div class="collapse-content">
+              <p>You can buy as little as $10 worth of Bitcoin on Kraken. Kraken also allows you to set up recurring
+                buys (charges apply) so you can continuously accumulate small amounts of Bitcoin regularly.
+
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Can I buy Bitcoin with a debit card?</div>
+            <div class="collapse-content">
+              <p>You can buy Bitcoin using a debit card certain regions on Kraken.<span
+                  class="text-[#7132F5] font-semibold"> Learn more about our Supported currencies and payment methods
+                  here.</span></p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Can I buy Bitcoin with other cryptocurrencies?</div>
+            <div class="collapse-content">
+              <p>Yes, Kraken makes it easy to purchase Bitcoin using hundreds of other cryptocurrencies. Browse the
+                Bitcoin markets available on Kraken to see how much it costs to buy Bitcoin with other cryptocurrencies.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">
+              How can I keep my Bitcoin safe?</div>
+            <div class="collapse-content">
+              <p>While we believe the safest place for your crypto is in your own cold wallet, we strive to be as
+                transparent and secure as possible when you trust us with your Bitcoin. When you choose to keep your
+                Bitcoin on Kraken,<span class="text-[#7132F5] font-semibold"> it is secured by our globally-recognized
+                  security standards.</span></p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-gray-50">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">Will I owe taxes when buying and selling Bitcoin?</div>
+            <div class="collapse-content">
+              <p>Each country handles cryptocurrency taxes differently. It’s recommended you speak with a local
+                professional tax advisor before making any digital asset purchases or reporting your crypto taxes.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <footer class="mt-20  bg-white py-10 md:py-20 custom " id="footer">
+    <div class="container mx-auto max-w-screen-xl">
+
+      <div class="md:flex justify-between gap-10">
+        <div class="flex my-5 flex-col md:max-w-[25rem]">
+          <a href="./index.html">
+            <h1 class="text-4xl font-medium text-[#01BC8D] hover:text-[#34C9A4]">CoinApex</h1>
+          </a>
+          <h4 class="text-slate-800 mt-4">Take your crypto trading to the next level.</h4>
+
+          <a href="https://chat.whatsapp.com/EzT2TTjkOeoK1NMP10Ps8yJ">
+            <button
+              class="py-5 px-10 w-full my-5 bg-slate-700 text-white rounded-full text-2xl font-semibold hover:bg-slate-200  transition">
+              Create account</button>
+          </a>
+          <a href="https://chat.whatsapp.com/EzT2TTjkOeoK1NMP8Ps8yJ">
+            <button
+              class="py-5 px-10 w-full border-slate-900 border text-slate-700 rounded-full text-2xl font-semibold hover:bg-slate-600 hover:text-white transition">
+              Sign in</button>
+          </a>
+
+          <div class="flex max-w-fit gap-2 mt-20 *:max-w-[5rem]">
+            <img src="./assets/images/download.png" alt="">
+            <img src="./assets/images/kraken-pro-app-2b99dee9cb051800c54085bced98f189.webp" alt="">
+            <img src="./assets/images/kraken-wallet-app-f72e29497351d949d010a08e3fb6d8e9.webp" alt="">
+          </div>
+
+
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 text-slate-700 *:mx-auto md:*:mx-0">
+          <div class="*:my-5 ">
+            <h3 class="text-slate-800">Features</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-whit text-2xl hover:text-[#9B6EF8]">NFT Marketplace</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Margin Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Futures Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">OTC Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Institutions</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">API Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Staking Rewards</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All features</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-800">Browse Prices</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Bitcoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Ethereum Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Dogecoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">XRP Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Cardano Prices</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Solana Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Litecoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto prices</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-800">Buying Guides</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Bitcoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Ethereum</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Dogecoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy XRP</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Cardano</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Solana</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Litecoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto guides</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-800">Company</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Security</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Careers</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Blog</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Press Room</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Affiliate Program</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Asset Listings</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Status</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Support Center</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-800">Popular Markets
+            </h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">BTC to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">ETH to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">DOGE to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">XRP to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">ADA to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">SOL to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">LTC to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto markets</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-800">Crypto Education</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is cryptocurrency?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Types of cryptocurrency</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is a blockchain?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is Bitcoin?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is Ethereum?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is an NFT?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is a DAO?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Learn crypto</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <hr class="border-t-[0.1px] opacity-10 mt-20 border-slate-800">
+      <div class="flex *:text-slate-700 flex-wrap *:text-xl gap-10 py-7">
+        <div>© 2011 - 2024 Payward, Inc.</div>
+        <div class="underline">Privacy Notice</div>
+        <div class="underline">Terms of Service</div>
+        <div class="underline">Cookie Settings</div>
+        <div class="underline">Disclosures</div>
+      </div>
+      <hr class="border-t-[0.1px] opacity-10  border-slate-800">
+
+
+      <div class="text-xl text-slate-700 py-10">These materials are for general information purposes only and are not
+        investment advice or a recommendation or solicitation to buy, sell, stake or hold any cryptoasset or to engage
+        in any specific trading strategy. Kraken does not and will not work to increase or decrease the price of any
+        particular cryptoasset it makes available. Some crypto products and markets are unregulated, and you may not be
+        protected by government compensation and/or regulatory protection schemes. The unpredictable nature of the
+        crypto-asset markets can lead to loss of funds. Tax may be payable on any return and/or on any increase in the
+        value of your cryptoassets and you should seek independent advice on your taxation position. Geographic
+        restrictions may apply.</div>
+
+
+    </div>
+
+  </footer>
+  <div id="backtotop"></div>
+
+
+
+
+  <script src="./assets/javascript.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+
+  </script>
+
+</body>
+
+</html>
